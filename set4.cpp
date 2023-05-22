@@ -1,0 +1,23 @@
+#include<iostream>
+#include<set>
+using namespace std;
+struct test
+{
+	int x;
+	bool operator<(const test &t) const
+	{
+		return this->x <t.x;	
+	}	
+};
+int main()
+{
+	set<test>s;
+	s.insert({5});
+	s.insert({20});
+	s.insert({10});
+	cout<<"Elements are ";
+	for(test t:s)
+		cout<<t.x<<" ";
+	cout<<endl;
+	return 0;
+}

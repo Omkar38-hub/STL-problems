@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+void repeat(int a[],int n)
+{
+	cout<<"The repeated elemenst from the array is ";
+	for(int i=0;i<n;i++)
+	{
+		for(int j=0;j<i;j++)
+		{
+			if(a[i]==a[j])
+			{
+				cout<<a[i]<<" ";
+				break;
+			}
+		}
+	}
+}
+int main()
+{
+	int a[]={10,8,10,7,7,6};
+	int n=sizeof(a)/sizeof(a[0]);
+	cout<<"Initial elements of the array is ";
+	for(int x: a)
+	    cout<<x<<" ";
+	cout<<endl;
+	repeat(a,n);
+	return 0;
+}
